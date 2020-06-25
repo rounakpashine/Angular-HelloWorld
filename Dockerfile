@@ -7,11 +7,10 @@ COPY package*.json ./
 
 RUN npm install
 
-#RUN npm audit fix
-
 COPY . .
 
 RUN npm run build
+
 
 # Stage 2
 FROM nginx:latest as nginx
